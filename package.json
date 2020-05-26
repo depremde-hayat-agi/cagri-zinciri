@@ -3,7 +3,7 @@
     "composer": "^0.20.9"
   },
   "name": "cagri-zinciri",
-  "version": "2b",
+  "version": "0.0.1",
   "description": "Distributed Database",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/cagri-zinciri.bna",

@@ -3,11 +3,13 @@ import org.deha.participant.HayatZinciriParticipant
 
 asset Cagri identified by cagriId {
     o String cagriId
-
+    --> HayatZinciriParticipant creator
     --> HayatZinciriParticipant owner optional
 }
 
 transaction CagriYarat {
+  o String cagriId
+  --> HayatZinciriParticipant creator
   --> HayatZinciriParticipant owner optional
 }
 
