@@ -1,0 +1,16 @@
+namespace org.deha.cagri
+import org.deha.participant.HayatZinciriParticipant
+
+asset Cagri identified by cagriId {
+    o String cagriId
+
+    --> HayatZinciriParticipant owner optional
+}
+
+transaction CagriYarat {
+  --> HayatZinciriParticipant owner optional
+}
+
+event CagriYaratildi{
+  o String cagriId
+}

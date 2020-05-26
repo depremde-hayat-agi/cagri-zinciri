@@ -1,0 +1,7 @@
+namespace  org.deha.participant
+
+participant HayatZinciriParticipant identified by participantName {
+  o String participantName
+}
+
+
