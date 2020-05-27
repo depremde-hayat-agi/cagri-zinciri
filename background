@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nohup composer-rest-server -c admin@cagri-zinciri -n always -u true -w true >> /home/guemues/logs/rest-server.txt 2>&1 &
+nohup composer-playground  >> /home/guemues/logs/playground.txt 2>&1 &
