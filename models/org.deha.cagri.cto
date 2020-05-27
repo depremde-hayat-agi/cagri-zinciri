@@ -21,9 +21,20 @@ transaction CagriYarat {
   --> HayatZinciriParticipant owner optional
 }
 
+transaction CagriAta {
+  o String cagriId
+  --> HayatZinciriParticipant owner
+}
+
+event CagriAtandi{
+  o String cagriId
+  --> HayatZinciriParticipant owner
+}
+
 event CagriYaratildi{
   o String cagriId
   o Double lattitude
   o Double longitude
+
   o String text optional
 }
