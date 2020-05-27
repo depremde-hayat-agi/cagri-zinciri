@@ -3,16 +3,27 @@ import org.deha.participant.HayatZinciriParticipant
 
 asset Cagri identified by cagriId {
     o String cagriId
+    o Double lattitude
+    o Double longitude
+    o String text optional
+     
     --> HayatZinciriParticipant creator
     --> HayatZinciriParticipant owner optional
 }
 
 transaction CagriYarat {
   o String cagriId
+  o Double lattitude
+  o Double longitude
+  o String text optional
+
   --> HayatZinciriParticipant creator
   --> HayatZinciriParticipant owner optional
 }
 
 event CagriYaratildi{
   o String cagriId
+  o Double lattitude
+  o Double longitude
+  o String text optional
 }

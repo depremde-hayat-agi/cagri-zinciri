@@ -27,7 +27,7 @@ function main(error){
     let transaction = factory.newTransaction("org.deha.cagri", "CagriYarat");
 
     transaction.setPropertyValue('creator', relation);
-    transaction.setPropertyValue('cagriId', "TEST");
+    transaction.setPropertyValue('cagriId', "TEST2");
     
     // 6. Submit the transaction
     return bnUtil.connection.submitTransaction(transaction).then(()=>{
