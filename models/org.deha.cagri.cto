@@ -10,7 +10,7 @@ asset Cagri identified by cagriId {
     --> HayatZinciriParticipant creator
     --> HayatZinciriParticipant owner optional
 }
-
+ 
 transaction CagriYarat {
   o String cagriId
   o Double lattitude
@@ -18,7 +18,7 @@ transaction CagriYarat {
   o String text optional
 
   --> HayatZinciriParticipant creator
-  --> HayatZinciriParticipant owner optional
+  --> HayatZinciriParticipant owner
 }
 
 transaction CagriAta {

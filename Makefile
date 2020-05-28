@@ -12,8 +12,13 @@ start:
 
 
 upgrade:
+	./kill || true
 	json -I -f package.json -e "$(JSON_CHANGE)"
 	composer archive create --sourceType=dir --sourceName=. 
 	composer network install --archiveFile="cagri-zinciri@$(v).bna" --card=PeerAdmin@hlfv1 
 	composer network upgrade -c PeerAdmin@hlfv1 -n cagri-zinciri --networkVersion="$(v)"
 	rm *.bna
+	./background
+
+cleardb: 
+	composer network reset -c admin@cagri-zinciri
