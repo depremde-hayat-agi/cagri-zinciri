@@ -12,7 +12,6 @@ asset Cagri identified by cagriId {
 }
  
 transaction CagriYarat {
-  o String cagriId
   o Double lattitude
   o Double longitude
   o String text optional
