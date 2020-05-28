@@ -10,7 +10,7 @@ query UnassignedCagri{
   description: "Unassigned cagri"
   statement:  
     SELECT  org.deha.cagri.Cagri 
-    WHERE (owner == "org.deha.participant.HayatZinciriParticipant#ATANMAMIS")
+    WHERE (owner == "resource:org.deha.participant.HayatZinciriParticipant#ATANMAMIS")
     LIMIT _$limit
     SKIP  _$skip
 }
@@ -19,7 +19,7 @@ query AssignedCagri{
   description: "Unassigned cagri"
   statement:  
     SELECT  org.deha.cagri.Cagri
-    WHERE (owner != "org.deha.participant.HayatZinciriParticipant#ATANMAMIS")
+    WHERE (owner != "resource:org.deha.participant.HayatZinciriParticipant#ATANMAMIS")
     LIMIT _$limit
     SKIP  _$skip
 }
