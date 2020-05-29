@@ -6,6 +6,7 @@ asset Cagri identified by cagriId {
     o Double lattitude
     o Double longitude
     o String cagriType
+    o DateTime createdAt
     o String text optional
 
     o Boolean isValidated default=false
@@ -41,6 +42,7 @@ event CagriYaratildi{
   o String cagriId
   o Double lattitude
   o Double longitude
+  o DateTime createdAt
   o String cagriType
   o String text optional
 
