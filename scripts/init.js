@@ -26,14 +26,15 @@ function    addParticipants(registry){
     const  bnDef = bnUtil.connection.getBusinessNetwork();
     const  factory = bnDef.getFactory();
 
+    let atanmamis = factory.newResource(participantNamespace, participantType, 'ATANMAMIS');
     let afad = factory.newResource(participantNamespace, participantType, 'AFAD');
     let ibb = factory.newResource(participantNamespace, participantType, 'IBB');
     let akut = factory.newResource(participantNamespace, participantType, 'AKUT');
     //participants.push(AFAD);
 
     // 4. Add the Aircraft resource to the registry
-    registry.addAll([afad, ibb, akut]).then(()=>{
-        console.log('afad, ibb, akut resources added successfully!!!');
+    registry.addAll([afad, ibb, akut, atanmamis]).then(()=>{
+        console.log('atanmamis, afad, ibb, akut resources added successfully!!!');
         bnUtil.disconnect();
     }).catch((error)=>{
         console.log(error);

@@ -5,24 +5,31 @@ asset Cagri identified by cagriId {
     o String cagriId
     o Double lattitude
     o Double longitude
+    o String cagriType
     o String text optional
+
+    o Boolean isValidated default=false
      
     --> HayatZinciriParticipant creator
+    --> HayatZinciriParticipant validator optional
     --> HayatZinciriParticipant owner optional
 }
  
 transaction CagriYarat {
   o Double lattitude
   o Double longitude
+  o String cagriType
   o String text optional
 
-  --> HayatZinciriParticipant creator
-  --> HayatZinciriParticipant owner
+
+  o String validator optional
+  o String owner optional
+  o String creator 
 }
 
 transaction CagriAta {
   o String cagriId
-  --> HayatZinciriParticipant owner
+  o String owner
 }
 
 event CagriAtandi{
@@ -34,6 +41,10 @@ event CagriYaratildi{
   o String cagriId
   o Double lattitude
   o Double longitude
-
+  o String cagriType
   o String text optional
+
+  --> HayatZinciriParticipant validator optional
+  --> HayatZinciriParticipant owner optional
+  --> HayatZinciriParticipant creator 
 }
